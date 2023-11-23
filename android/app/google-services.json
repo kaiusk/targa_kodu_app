@@ -1,0 +1,127 @@
+{
+  "project_info": {
+    "project_number": "918655352848",
+    "firebase_url": "https://homeassistant-a4aa0.firebaseio.com",
+    "project_id": "homeassistant-a4aa0",
+    "storage_bucket": "homeassistant-a4aa0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918655352848:android:94c7d8ad7e79dadf948a95",
+        "android_client_info": {
+          "package_name": "com.example.flutter_tarkkodu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918655352848-gacvqbdocp9nkt4p2q1iusfoj3hmebli.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTRbJ_drEJLM2fNKKQreaBzi0u33BiAjk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918655352848-d2qnfh6l393kj31483bdki6crdp6obt0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "918655352848-ut4i9iedip1g1ocq21d4jei4bos5su8d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "none"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918655352848:android:4a85d7270bcb7524948a95",
+        "android_client_info": {
+          "package_name": "home.sirkay.targa_kodu_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918655352848-gacvqbdocp9nkt4p2q1iusfoj3hmebli.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTRbJ_drEJLM2fNKKQreaBzi0u33BiAjk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918655352848-d2qnfh6l393kj31483bdki6crdp6obt0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "918655352848-ut4i9iedip1g1ocq21d4jei4bos5su8d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "none"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918655352848:android:cbc7f0025c028f89948a95",
+        "android_client_info": {
+          "package_name": "tark.kodu.tarkkodu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918655352848-igmh6lgsmqt15o9ouuao82nln5jb4jcs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tark.kodu.tarkkodu",
+            "certificate_hash": "d5f349538ab5fbe1cf957992ccfd7aa85e14a8dd"
+          }
+        },
+        {
+          "client_id": "918655352848-gacvqbdocp9nkt4p2q1iusfoj3hmebli.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTRbJ_drEJLM2fNKKQreaBzi0u33BiAjk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918655352848-d2qnfh6l393kj31483bdki6crdp6obt0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "918655352848-ut4i9iedip1g1ocq21d4jei4bos5su8d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "none"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
