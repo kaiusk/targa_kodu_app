@@ -115,7 +115,13 @@ class _AuthScreenState extends State<AuthScreen> {
                                 backgroundColor: Theme.of(context)
                                     .colorScheme
                                     .primaryContainer),
-                            child: Text(_isLogin ? 'Logi sisse' : 'Signup')),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(_isLogin ? 'Logi sisse ' : 'Signup '),
+                                const Icon(Icons.login_outlined)
+                              ],
+                            )),
                         /*TextButton(
                             onPressed: () {
                               setState(() {

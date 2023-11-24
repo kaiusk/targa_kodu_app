@@ -7,7 +7,7 @@ class SplashScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: const Center(
-        child: Text('loading....'),
+        child: CircularProgressIndicator(),
       ),
     );
   }
