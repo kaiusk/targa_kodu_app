@@ -21,10 +21,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          foregroundColor: Colors.amber,
           leading: Image.asset('assets/images/icon.png'),
           centerTitle: true,
-          title: const Text('TarkKodu', textScaleFactor: 1.5,),
+          title: const Text('TarkKodu'),
           actions: [
             IconButton(
                 onPressed: () {
@@ -54,10 +53,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
               currentPageIndex = index;
             });
           },
-          indicatorColor: Theme.of(context).colorScheme.primaryContainer,
+          //indicatorColor: Theme.of(context).colorScheme.primaryContainer,
           selectedIndex: currentPageIndex,
           elevation: 4,
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          //backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           destinations: const <Widget>[
             NavigationDestination(
               icon: Icon(Icons.dashboard),

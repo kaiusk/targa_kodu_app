@@ -30,7 +30,7 @@ class CardWidget extends StatelessWidget {
                     Icon(
                       icon,
                       size: 40,
-                      color: Colors.blue,
+                      //color: Colors.blue,
                     ),
                     Text(
                       value,

@@ -4,11 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:targa_kodu_app/screens/auth.dart';
 import 'package:targa_kodu_app/screens/dashboard.dart';
 import 'package:targa_kodu_app/screens/splash.dart';
+import 'package:targa_kodu_app/theme.dart';
 
 import 'firebase_options.dart';
 
 var kColorScheme =
-    ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 72, 120, 185));
+    ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 3, 17, 35));
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,13 +26,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'FlutterChat',
-        theme: ThemeData().copyWith(
-            useMaterial3: true,
-            colorScheme: kColorScheme,
-            appBarTheme: const AppBarTheme().copyWith(
-                backgroundColor: kColorScheme.inversePrimary,
-                foregroundColor: kColorScheme.primaryContainer,
-                elevation: 4)),
+        theme: smartHomeTheme,
         home: StreamBuilder(
           stream: FirebaseAuth.instance.authStateChanges(),
           builder: (ctx, snapshot) {
