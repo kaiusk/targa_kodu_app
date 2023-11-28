@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CardWidget extends StatelessWidget {
+  final String sensorId;
   final String title;
   final IconData icon;
   final String value;
@@ -8,6 +9,7 @@ class CardWidget extends StatelessWidget {
 
   const CardWidget({
     super.key,
+    required this.sensorId,
     required this.title,
     required this.value,
     required this.icon,
@@ -47,7 +49,7 @@ class CardWidget extends StatelessWidget {
               ],
             ),
             InkWell(
-              onTap: ()=>selectCard(title),
+              onTap: ()=>selectCard(sensorId),
               child: const Icon(Icons.more_vert),
             ),
           ],

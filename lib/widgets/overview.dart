@@ -64,12 +64,13 @@ class Overview extends StatelessWidget {
                   .firstWhere((sensor) => sensor.id == cardList[index].id);
               //print(mySensor.data()); {name: Elutuba2 temperatuur, state: 20.8, last_changed: 2023-11-28T09:21:19.970315+00:00}
               return CardWidget(
-                  title: cardList[index].label,
-                  value: double.parse(mySensor.data()['state'])
-                          .toStringAsFixed(1) +
-                      cardList[index].unit,
-                  icon: cardList[index].icon,
-                  selectCard:  cardSelected,
+                sensorId: cardList[index].id,
+                title: cardList[index].label,
+                value:
+                    double.parse(mySensor.data()['state']).toStringAsFixed(1) +
+                        cardList[index].unit,
+                icon: cardList[index].icon,
+                selectCard: cardSelected,
               );
             });
       },
