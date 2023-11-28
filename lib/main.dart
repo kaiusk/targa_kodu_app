@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:targa_kodu_app/screens/auth.dart';
-import 'package:targa_kodu_app/screens/dashboard.dart';
+import 'package:targa_kodu_app/screens/home.dart';
 import 'package:targa_kodu_app/screens/splash.dart';
 import 'package:targa_kodu_app/theme.dart';
 
@@ -35,7 +35,7 @@ class App extends StatelessWidget {
             }
 
             if (snapshot.hasData) {
-              return const DashboardScreen();
+              return const HomeScreen();
             }
 
             return const AuthScreen();

@@ -6,12 +6,13 @@ class CardWidget extends StatelessWidget {
   final String value;
   final void Function() selectCard;
 
-  const CardWidget(
-      {super.key,
-      required this.title,
-      required this.value,
-      required this.icon,
-      required this.selectCard});
+  const CardWidget({
+    super.key,
+    required this.title,
+    required this.value,
+    required this.icon,
+    required this.selectCard,
+  });
 
   @override
   Widget build(BuildContext context) {

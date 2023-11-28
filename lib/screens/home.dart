@@ -1,16 +1,15 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:targa_kodu_app/widgets/overview.dart';
 
-import '../widgets/card_widget.dart';
-
-class DashboardScreen extends StatefulWidget {
-  const DashboardScreen({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<DashboardScreen> createState() => _DashboardScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _DashboardScreenState extends State<DashboardScreen> {
+class _HomeScreenState extends State<HomeScreen> {
   var currentPageIndex = 0;
 
    void cardSelect() {
@@ -33,7 +32,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 icon: const Icon(Icons.exit_to_app_rounded))
           ],
         ),
-        body: ListView(
+        body: const Overview(), /*ListView(
           padding: const EdgeInsets.all(8),
           children:  <Widget>[
             CardWidget(value: '+23°C', title: 'Õues', icon: Icons.device_thermostat, selectCard: cardSelect),
@@ -46,7 +45,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             CardWidget(value: '+23°C', title: 'Kelder', icon: Icons.device_thermostat, selectCard: cardSelect),
             CardWidget(value: '+23°C', title: 'Saun', icon: Icons.device_thermostat, selectCard: cardSelect),
           ],
-        ),
+        ),*/
         bottomNavigationBar: NavigationBar(
           onDestinationSelected: (int index) {
             setState(() {

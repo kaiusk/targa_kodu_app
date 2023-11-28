@@ -1,22 +1,8 @@
-# targa_kodu_app
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# TargaKodu äpp
 
 
 Materjalid:
  - [navigatsioon](https://www.woolha.com/tutorials/flutter-using-navigationbar-widget-examples)
  - [accordion](https://www.fluttercampus.com/guide/334/add-accordion-flutter/)
  - [ikoonid](https://fonts.google.com/icons?icon.query=list)
+ - [pull to refresh](https://www.geeksforgeeks.org/flutter-implementing-pull-to-refresh/)
