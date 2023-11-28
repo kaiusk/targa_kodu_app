@@ -4,7 +4,7 @@ class CardWidget extends StatelessWidget {
   final String title;
   final IconData icon;
   final String value;
-  final void Function() selectCard;
+  final Function selectCard;
 
   const CardWidget({
     super.key,
@@ -31,7 +31,7 @@ class CardWidget extends StatelessWidget {
                     Icon(
                       icon,
                       size: 40,
-                      //color: Colors.blue,
+                      color: Colors.lightBlueAccent,
                     ),
                     Text(
                       value,
@@ -47,7 +47,7 @@ class CardWidget extends StatelessWidget {
               ],
             ),
             InkWell(
-              onTap: selectCard,
+              onTap: ()=>selectCard(title),
               child: const Icon(Icons.more_vert),
             ),
           ],

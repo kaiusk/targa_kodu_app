@@ -12,9 +12,10 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   var currentPageIndex = 0;
 
-   void cardSelect() {
-     print('kaardi klikk');
+   void cardSelect(String title) {
+     print('kaardi $title klikk');
    }
+
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 icon: const Icon(Icons.exit_to_app_rounded))
           ],
         ),
-        body: const Overview(), /*ListView(
+        body: Overview(cardSelect), /*ListView(
           padding: const EdgeInsets.all(8),
           children:  <Widget>[
             CardWidget(value: '+23°C', title: 'Õues', icon: Icons.device_thermostat, selectCard: cardSelect),

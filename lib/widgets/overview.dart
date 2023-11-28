@@ -12,7 +12,9 @@ class CardObject {
 }
 
 class Overview extends StatelessWidget {
-  const Overview({super.key});
+  final Function(String title) cardSelected;
+
+  const Overview(this.cardSelected, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +69,8 @@ class Overview extends StatelessWidget {
                           .toStringAsFixed(1) +
                       cardList[index].unit,
                   icon: cardList[index].icon,
-                  selectCard: () {});
+                  selectCard:  cardSelected,
+              );
             });
       },
     );
