@@ -16,7 +16,6 @@ class _HomeScreenState extends State<HomeScreen> {
      print('kaardi $title klikk');
    }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,20 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 icon: const Icon(Icons.exit_to_app_rounded))
           ],
         ),
-        body: Overview(cardSelect), /*ListView(
-          padding: const EdgeInsets.all(8),
-          children:  <Widget>[
-            CardWidget(value: '+23°C', title: 'Õues', icon: Icons.device_thermostat, selectCard: cardSelect),
-            CardWidget(value: '23kWh', title: 'Energia', icon: Icons.bolt_outlined,selectCard: cardSelect),
-            CardWidget(value: '23mm', title: 'Vihm', icon: Icons.water_drop,selectCard: cardSelect),
-            CardWidget(value: '+23°C', title: 'Elutuba', icon: Icons.device_thermostat, selectCard: cardSelect),
-            CardWidget(value: '+23°C', title: 'Köök', icon: Icons.device_thermostat, selectCard: cardSelect),
-            CardWidget(value: '+23°C', title: 'Magamistuba', icon: Icons.device_thermostat, selectCard: cardSelect),
-            CardWidget(value: '+23°C', title: 'Koridor', icon: Icons.device_thermostat, selectCard: cardSelect),
-            CardWidget(value: '+23°C', title: 'Kelder', icon: Icons.device_thermostat, selectCard: cardSelect),
-            CardWidget(value: '+23°C', title: 'Saun', icon: Icons.device_thermostat, selectCard: cardSelect),
-          ],
-        ),*/
+        body:  _buildPage(),
         bottomNavigationBar: NavigationBar(
           onDestinationSelected: (int index) {
             setState(() {
@@ -72,5 +58,18 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ],
         ));
+  }
+
+  Widget _buildPage() {
+    switch (currentPageIndex) {
+      case 0:
+        return  Overview(cardSelect);
+      case 1:
+        return const Center(child: Text('kaamera leht'),);
+      case 2:
+        return const Center(child: Text('teadete leht'),);
+      default:
+        return Overview(cardSelect);
+    }
   }
 }
