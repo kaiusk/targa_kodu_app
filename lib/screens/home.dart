@@ -26,9 +26,11 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.white70,
+          foregroundColor: Colors.lightBlue,
           leading: Image.asset('assets/images/icon.png'),
           centerTitle: true,
-          title: const Text('TarkKodu'),
+          title: const Text('TarkKodu', style: TextStyle(color: Colors.lightBlue),),
           actions: [
             IconButton(
                 onPressed: () {
