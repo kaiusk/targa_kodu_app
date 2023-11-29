@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:targa_kodu_app/screens/camera.dart';
 import 'package:targa_kodu_app/widgets/overview.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -65,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
       case 0:
         return  Overview(cardSelect);
       case 1:
-        return const Center(child: Text('kaamera leht'),);
+        return const CameraScreen();
       case 2:
         return const Center(child: Text('teadete leht'),);
       default:
