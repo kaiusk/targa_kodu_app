@@ -25,7 +25,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'FlutterChat',
+        title: 'TarkKodu',
         theme: smartHomeTheme,
         home: StreamBuilder(
           stream: FirebaseAuth.instance.authStateChanges(),
