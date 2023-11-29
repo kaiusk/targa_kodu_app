@@ -40,6 +40,7 @@ dependencies:
   cloud_firestore: ^4.13.2
   video_player: ^2.8.1
   thermostat: ^1.1.5
+  intl: ^0.18.1
 
 dev_dependencies:
   flutter_test:

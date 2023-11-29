@@ -118,8 +118,14 @@ class _AuthScreenState extends State<AuthScreen> {
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                Text(_isLogin ? 'Logi sisse ' : 'Signup '),
-                                const Icon(Icons.login_outlined)
+                                Text(
+                                  _isLogin ? 'Logi sisse ' : 'Signup ',
+                                  style: const TextStyle(color: Colors.white),
+                                ),
+                                const Icon(
+                                  Icons.login_outlined,
+                                  color: Colors.white,
+                                )
                               ],
                             )),
                         /*TextButton(

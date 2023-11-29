@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:targa_kodu_app/screens/camera.dart';
+import 'package:targa_kodu_app/screens/events.dart';
 import 'package:targa_kodu_app/screens/room.dart';
 import 'package:targa_kodu_app/widgets/overview.dart';
 
@@ -78,9 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
       case 1:
         return const CameraScreen();
       case 2:
-        return const Center(
-          child: Text('teadete leht'),
-        );
+        return NotificationScreen();
       default:
         return Overview(cardSelect);
     }
