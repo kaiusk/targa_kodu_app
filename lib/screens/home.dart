@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:targa_kodu_app/screens/camera.dart';
+import 'package:targa_kodu_app/screens/room.dart';
 import 'package:targa_kodu_app/widgets/overview.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -12,10 +13,14 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   var currentPageIndex = 0;
+  var singleSensor = false;
 
-   void cardSelect(String title) {
-     print('kaardi $title klikk');
-   }
+  void cardSelect(String title) {
+    print('kaardi $title klikk');
+    setState(() {
+      singleSensor = true;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,11 +38,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 icon: const Icon(Icons.exit_to_app_rounded))
           ],
         ),
-        body:  _buildPage(),
+        body: _buildPage(),
         bottomNavigationBar: NavigationBar(
           onDestinationSelected: (int index) {
             setState(() {
               currentPageIndex = index;
+              singleSensor = false;
             });
           },
           //indicatorColor: Theme.of(context).colorScheme.primaryContainer,
@@ -62,13 +68,18 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _buildPage() {
+    if (singleSensor) {
+      return RoomScreen();
+    }
     switch (currentPageIndex) {
       case 0:
-        return  Overview(cardSelect);
+        return Overview(cardSelect);
       case 1:
         return const CameraScreen();
       case 2:
-        return const Center(child: Text('teadete leht'),);
+        return const Center(
+          child: Text('teadete leht'),
+        );
       default:
         return Overview(cardSelect);
     }

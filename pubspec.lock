@@ -293,6 +293,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.0"
+  thermostat:
+    dependency: "direct main"
+    description:
+      name: thermostat
+      sha256: e0cd32e25c99efc6e46b3e67399361a16bb61118667549eadb13ed7a04d9ad49
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.5"
   typed_data:
     dependency: transitive
     description:
