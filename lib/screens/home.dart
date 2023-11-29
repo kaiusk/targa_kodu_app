@@ -16,7 +16,6 @@ class _HomeScreenState extends State<HomeScreen> {
   var singleSensor = false;
 
   void cardSelect(String title) {
-    print('kaardi $title klikk');
     setState(() {
       singleSensor = true;
     });
@@ -46,10 +45,8 @@ class _HomeScreenState extends State<HomeScreen> {
               singleSensor = false;
             });
           },
-          //indicatorColor: Theme.of(context).colorScheme.primaryContainer,
           selectedIndex: currentPageIndex,
           elevation: 4,
-          //backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           destinations: const <Widget>[
             NavigationDestination(
               icon: Icon(Icons.dashboard),
@@ -69,7 +66,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _buildPage() {
     if (singleSensor) {
-      return RoomScreen();
+      return RoomScreen(() {
+        setState(() {
+          singleSensor = false;
+        });
+      });
     }
     switch (currentPageIndex) {
       case 0:

@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:thermostat/thermostat.dart';
 
 class RoomScreen extends StatefulWidget {
-  const RoomScreen({super.key});
+  const RoomScreen(this.goBack, {super.key});
 
+  final void Function() goBack;
   @override
   State<RoomScreen> createState() => _RoomScreenState();
 }
@@ -21,6 +22,7 @@ class _RoomScreenState extends State<RoomScreen> {
     });
   }
 
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -35,7 +37,7 @@ class _RoomScreenState extends State<RoomScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     IconButton(
-                      onPressed: () {},
+                      onPressed: widget.goBack,
                       icon: const Icon(Icons.arrow_back),
                     ),
                     const VerticalDivider(
