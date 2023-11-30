@@ -129,13 +129,14 @@ class _AuthScreenState extends State<AuthScreen> {
                               ],
                             )),
                         /*TextButton(
-                            onPressed: () {
-                              setState(() {
-                                _isLogin = !_isLogin;
-                              });
-                            },
-                            child: Text(
-                                _isLogin ? 'Create account' : 'I have account'))*/
+                          onPressed: () {
+                            setState(() {
+                              _isLogin = !_isLogin;
+                            });
+                          },
+                          child: Text(
+                              _isLogin ? 'Create account' : 'I have account'),
+                        ),*/
                       ],
                     ),
                   ),

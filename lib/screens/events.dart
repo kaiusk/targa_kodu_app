@@ -31,6 +31,9 @@ class _NotificationScreenState extends State<NotificationScreen> {
                     DateFormat('yyyy-MM-dd – kk:mm').format(DateTime.now())),
               );
             });
+            ScaffoldMessenger.of(context).clearSnackBars();
+            ScaffoldMessenger.of(context)
+                .showSnackBar(const SnackBar(content: Text('Uus teavitus')));
           },
         );
       },
