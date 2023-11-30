@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:thermostat/thermostat.dart';
 
 class RoomScreen extends StatefulWidget {
-  const RoomScreen(this.goBack, {super.key});
+  final String cardTitle;
+  const RoomScreen({super.key, required this.goBack, required this.cardTitle});
 
   final void Function() goBack;
   @override
@@ -21,7 +22,6 @@ class _RoomScreenState extends State<RoomScreen> {
       currentTemp = val;
     });
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -45,9 +45,9 @@ class _RoomScreenState extends State<RoomScreen> {
                       thickness: 5,
                       color: Colors.grey,
                     ),
-                    const Expanded(
+                     Expanded(
                       child: Text(
-                        'Elutuba',
+                        widget.cardTitle,
                         textScaleFactor: 2.0,
                       ),
                     ),

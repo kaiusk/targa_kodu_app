@@ -49,7 +49,7 @@ class CardWidget extends StatelessWidget {
               ],
             ),
             InkWell(
-              onTap: ()=>selectCard(sensorId),
+              onTap: ()=>selectCard(title),
               child: const Icon(Icons.more_vert),
             ),
           ],

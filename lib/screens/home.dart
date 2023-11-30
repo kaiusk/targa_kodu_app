@@ -15,9 +15,11 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   var currentPageIndex = 0;
   var singleSensor = false;
+  var cardTitle = '';
 
   void cardSelect(String title) {
     setState(() {
+      cardTitle = title;
       singleSensor = true;
     });
   }
@@ -30,7 +32,10 @@ class _HomeScreenState extends State<HomeScreen> {
           foregroundColor: Colors.lightBlue,
           leading: Image.asset('assets/images/icon.png'),
           centerTitle: true,
-          title: const Text('TarkKodu', style: TextStyle(color: Colors.lightBlue),),
+          title: const Text(
+            'TarkKodu',
+            style: TextStyle(color: Colors.lightBlue),
+          ),
           actions: [
             IconButton(
                 onPressed: () {
@@ -69,11 +74,13 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _buildPage() {
     if (singleSensor) {
-      return RoomScreen(() {
-        setState(() {
-          singleSensor = false;
-        });
-      });
+      return RoomScreen(
+          cardTitle: cardTitle,
+          goBack: () {
+            setState(() {
+              singleSensor = false;
+            });
+          });
     }
     switch (currentPageIndex) {
       case 0:
@@ -81,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
       case 1:
         return const CameraScreen();
       case 2:
-        return NotificationScreen();
+        return const NotificationScreen();
       default:
         return Overview(cardSelect);
     }
