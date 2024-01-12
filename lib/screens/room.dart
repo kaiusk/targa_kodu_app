@@ -3,9 +3,11 @@ import 'package:thermostat/thermostat.dart';
 
 class RoomScreen extends StatefulWidget {
   final String cardTitle;
+
   const RoomScreen({super.key, required this.goBack, required this.cardTitle});
 
   final void Function() goBack;
+
   @override
   State<RoomScreen> createState() => _RoomScreenState();
 }
@@ -45,7 +47,7 @@ class _RoomScreenState extends State<RoomScreen> {
                       thickness: 5,
                       color: Colors.grey,
                     ),
-                     Expanded(
+                    Expanded(
                       child: Text(
                         widget.cardTitle,
                         textScaleFactor: 2.0,

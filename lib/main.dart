@@ -9,7 +9,7 @@ import 'package:targa_kodu_app/theme.dart';
 import 'firebase_options.dart';
 
 var kColorScheme =
-    ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 3, 17, 35));
+ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 3, 17, 35));
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
